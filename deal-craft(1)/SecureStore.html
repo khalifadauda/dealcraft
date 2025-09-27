@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        ::-webkit-scrollbar { display: none; }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#008000',
+                        accent: '#FFFFFF',
+                        'light-gray': '#f8f8f8',
+                        'dark-gray': '#333333'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif !important;
+        }
+        .fa, .fas, .far, .fal, .fab {
+            font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+        }
+        .highlighted-section {
+            outline: 2px solid #3F20FB;
+            background-color: rgba(63, 32, 251, 0.1);
+        }
+        .edit-button {
+            position: absolute;
+            z-index: 1000;
+        }
+        html, body {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-light-gray font-sans">
+    <!-- Header Section -->
+    <header id="header" class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-5 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="text-2xl font-bold text-primary">DealCraft</div>
+                <span class="text-dark-gray ml-2">Partners Nigeria Ltd</span>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-dark-gray hover:text-primary transition cursor-pointer">Company Overview</a>
+                <a href="Our Vission.html" class="text-dark-gray hover:text-primary transition cursor-pointer">Our Vision</a>
+                <a href="Our Operations.html" class="text-dark-gray hover:text-primary transition cursor-pointer">Our Operations</a>
+                <a href="Target Outcomes.html" class="text-dark-gray hover:text-primary transition cursor-pointer">Target Outcomes</a>
+                <a href="SecureStore.html" class="text-primary font-medium cursor-pointer">SecureStore</a>
+                <a href="blog.html" class="text-dark-gray hover:text-primary transition cursor-pointer">Blog</a>
+            </nav>
+            <button class="md:hidden text-dark-gray">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="usp-hero" class="relative h-[500px] overflow-hidden">
+        <img class="absolute w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/ad767aa19c-d78cb33af3eebb143e1e.png" alt="Modern Nigerian agricultural technology innovation with digital solutions and equipment">
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div class="container mx-auto px-5 h-full flex flex-col justify-center items-center relative z-10 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Secure Store</h1>
+            <p class="text-xl text-white max-w-2xl">Discover what sets DealCraft apart in the Nigerian commodities market</p>
+        </div>
+    </section>
+
+    <!-- SecureStore System Section -->
+    <section id="securestore-system" class="py-16 bg-light-gray">
+        <div class="container mx-auto px-5">
+            <div class="flex flex-col md:flex-row-reverse gap-10 items-center">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-primary mb-6">SecureStore: Our Flagship Innovation</h2>
+                    <p class="text-base mb-4">The SecureStore electronic warehouse receipt system is at the heart of our value proposition, transforming how agricultural commodities are stored, traded, and financed in Nigeria.</p>
+                    <div id="securestore-features" class="space-y-4 mt-6">
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <div class="flex items-center">
+                                <div class="text-primary text-xl mr-3">
+                                    <i class="fa-solid fa-shield-halved"></i>
+                                </div>
+                                <h3 class="font-semibold">Secure Digital Receipts</h3>
+                            </div>
+                            <p class="text-sm mt-2 ml-8">Tamper-proof electronic receipts that accurately represent stored commodities</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <div class="flex items-center">
+                                <div class="text-primary text-xl mr-3">
+                                    <i class="fa-solid fa-money-bill-transfer"></i>
+                                </div>
+                                <h3 class="font-semibold">Collateral for Financing</h3>
+                            </div>
+                            <p class="text-sm mt-2 ml-8">Receipts can be used as collateral for loans from partner financial institutions</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <div class="flex items-center">
+                                <div class="text-primary text-xl mr-3">
+                                    <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                                </div>
+                                <h3 class="font-semibold">Tradable Assets</h3>
+                            </div>
+                            <p class="text-sm mt-2 ml-8">Receipts can be bought and sold on our platform, creating liquidity for farmers</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <div class="flex items-center">
+                                <div class="text-primary text-xl mr-3">
+                                    <i class="fa-solid fa-chart-line"></i>
+                                </div>
+                                <h3 class="font-semibold">Real-time Market Data</h3>
+                            </div>
+                            <p class="text-sm mt-2 ml-8">Provides users with current market prices and trends to inform decision-making</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="rounded-lg overflow-hidden shadow-md">
+                        <img class="w-full h-[400px] object-cover" src="warehouse.png" alt="SecureStore warehouse and staff">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ewrs-section" class="py-16 bg-white">
+        <div class="container mx-auto px-5">
+            <div class="flex flex-col md:flex-row gap-10 items-center">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-primary mb-6">Electronic Warehouse Receipt System</h2>
+                    <p class="text-base mb-4">The SecureStore electronic warehouse receipt system, is revolutionizing commodity finance in Nigeria by creating a secure, transparent, and efficient platform for farmers to monetize their stored commodities.</p>
+                    <p class="text-base mb-4">This digital solution transforms physical commodities into tradable electronic receipts, enabling farmers to access finance without selling their produce during low-price periods, while providing financial institutions with secure collateral for agricultural loans.</p>
+                    <div class="mt-6">
+                        <a href="https://www.ewhrs.com/" target="_blank" rel="noopener" class="inline-flex items-center bg-primary hover:bg-opacity-90 text-white px-6 py-3 rounded-md transition cursor-pointer">
+                            <span>Learn More About SecureStore</span>
+                            <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="rounded-lg overflow-hidden shadow-lg">
+                        <img class="w-full h-[350px] object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/7dff807283-a0c3edf5bb3ffe6263ad.png" alt="Nigerian farmer receiving electronic warehouse receipt on tablet, digital agricultural finance system in action, professional photography">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Advantages Section -->
+    <section id="market-advantages" class="py-16 bg-white">
+        <div class="container mx-auto px-5">
+            <h2 class="text-3xl font-bold text-primary mb-10 text-center">Our Market Advantages</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div id="advantage-card-1" class="bg-light-gray rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover" src="warehouse.png" alt="Modern warehouse storing agricultural commodities in Nigeria">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-primary text-3xl mb-4">
+                            <i class="fa-solid fa-warehouse"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Strategic Warehouse Network</h3>
+                        <p class="text-base">Our warehouses are strategically located across key agricultural regions in Nigeria, reducing transportation costs and ensuring proximity to farmers.</p>
+                    </div>
+                </div>
+                <div id="advantage-card-2" class="bg-light-gray rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover" src="finance.jpg">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-primary text-3xl mb-4">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Financial Partnerships</h3>
+                        <p class="text-base">Our established relationships with leading Nigerian financial institutions provide our users with preferential access to agricultural financing.</p>
+                    </div>
+                </div>
+                <div id="advantage-card-3" class="bg-light-gray rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 overflow-hidden">
+                        <img class="w-full h-full object-cover" src="access.jpg" alt="Nigerian commodity trading floor with people trading agricultural products">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-primary text-3xl mb-4">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Market Access</h3>
+                        <p class="text-base">Our trading platform connects farmers and traders with local and international buyers, opening new markets and opportunities for Nigerian commodities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-white">
+        <div class="container mx-auto px-5">
+            <h2 class="text-3xl font-bold text-primary mb-10 text-center">What Our Partners Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div id="testimonial-1" class="bg-light-gray p-6 rounded-lg shadow-md relative">
+                    <div class="text-primary text-4xl absolute -top-4 -left-2">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+                    <p class="text-base mb-6 mt-4">DealCraft's SecureStore system has transformed how we manage our agricultural inventory. The ability to use stored commodities as collateral for financing has significantly improved our cash flow.</p>
+                    <div class="flex items-center">
+                        <img src="https://cdn-icons-png.flaticon.com/512/8143/8143259.png" alt="Testimonial Icon" class="w-12 h-12 rounded-full object-cover bg-white mr-4">
+                        <div>
+                            <h4 class="font-bold">Ibrahim Olatunji</h4>
+                            <p class="text-sm text-gray-600">Large-Scale Cassava Farmer</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="testimonial-2" class="bg-light-gray p-6 rounded-lg shadow-md relative">
+                    <div class="text-primary text-4xl absolute -top-4 -left-2">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+                    <p class="text-base mb-6 mt-4">As a financial institution, partnering with DealCraft has allowed us to extend our services to agricultural communities with reduced risk. Their warehouse receipt system provides excellent collateral security.</p>
+                    <div class="flex items-center">
+                        <img src="https://cdn-icons-png.flaticon.com/512/8143/8143259.png" alt="Testimonial Icon" class="w-12 h-12 rounded-full object-cover bg-white mr-4">
+                        <div>
+                            <h4 class="font-bold">Aisha Mohammed</h4>
+                            <p class="text-sm text-gray-600">Agricultural Finance Manager, Unity Bank</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="testimonial-3" class="bg-light-gray p-6 rounded-lg shadow-md relative">
+                    <div class="text-primary text-4xl absolute -top-4 -left-2">
+                        <i class="fa-solid fa-quote-left"></i>
+                    </div>
+                    <p class="text-base mb-6 mt-4">DealCraft's platform has given our cooperative access to markets we couldn't reach before. The quality assurance standards have helped us command better prices for our produce.</p>
+                    <div class="flex items-center">
+                        <img src="https://cdn-icons-png.flaticon.com/512/8143/8143259.png" alt="Testimonial Icon" class="w-12 h-12 rounded-full object-cover bg-white mr-4">
+                        <div>
+                            <h4 class="font-bold">Emmanuel Adeyemi</h4>
+                            <p class="text-sm text-gray-600">Chairman, Osun Farmers' Cooperative</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="cta" class="py-16 bg-primary bg-opacity-10">
+        <div class="container mx-auto px-5 text-center">
+            <h2 class="text-3xl font-bold text-primary mb-6">Ready to Transform Your Agricultural Business?</h2>
+            <p class="text-lg max-w-3xl mx-auto mb-8">Join thousands of farmers, traders, and financial institutions already benefiting from DealCraft's innovative solutions.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <span class="bg-primary hover:bg-opacity-90 text-white font-medium py-3 px-8 rounded-md transition cursor-pointer">Contact Us Today</span>
+                <a href="DealCraft Partners Company Profile....pdf" download class="bg-white border border-primary text-primary hover:bg-primary hover:text-white font-medium py-3 px-8 rounded-md transition cursor-pointer">
+                    Download Brochure
+                </a>
+            </div>
+        </div>
+    </section>
+
+      <!-- Footer -->
+    <footer id="footer" class="bg-dark-gray text-white py-10">
+        <div class="container mx-auto px-5">
+            <div class="flex flex-col md:flex-row justify-between mb-8">
+                <div class="mb-6 md:mb-0">
+                    <div class="text-2xl font-bold text-primary mb-4">DealCraft</div>
+                    <p class="max-w-xs text-gray-300">Revolutionizing commodity trading and agricultural finance in Nigeria through innovative technology solutions.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-1 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="index.html" class="text-gray-300 hover:text-primary transition">Company Overview</a></li>
+                            <li><a href="Our Vission.html" class="text-gray-300 hover:text-primary transition">Our Vision</a></li>
+                            <li><a href="Our Operations.html" class="text-gray-300 hover:text-primary transition">Our Operations</a></li>
+                            <li><a href="Target Outcomes.html" class="text-gray-300 hover:text-primary transition">Target Outcomes</a></li>
+                            <li><a href="SecureStore.html" class="text-gray-300 hover:text-primary transition">SecureStore</a>
+                            <li><a href="blog.html" class="text-gray-300 hover:text-primary transition">Blog</a>
+
+                        </ul>
+                    </div>
+
+                 
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 DealCraft Partners Nigeria Ltd. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-primary transition">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

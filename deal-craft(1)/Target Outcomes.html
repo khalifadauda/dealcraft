@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highcharts@10.0.0/highcharts.js"></script>
+    <style>
+        ::-webkit-scrollbar { display: none; }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#008000',
+                        accent: '#FFFFFF',
+                        'light-gray': '#f8f8f8',
+                        'dark-gray': '#333333'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif !important;
+        }
+        .fa, .fas, .far, .fal, .fab {
+            font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+        }
+        .highlighted-section {
+            outline: 2px solid #3F20FB;
+            background-color: rgba(63, 32, 251, 0.1);
+        }
+        .edit-button {
+            position: absolute;
+            z-index: 1000;
+        }
+        html, body {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-light-gray font-sans">
+    <!-- Header Section -->
+    <header id="header" class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-5 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="text-2xl font-bold text-primary">DealCraft</div>
+                <span class="text-dark-gray ml-2">Partners Nigeria Ltd</span>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-dark-gray hover:text-primary transition cursor-pointer">Company Overview</a>
+                <a href="Our Vission.html"  class="text-dark-gray hover:text-primary transition cursor-pointer">Our Vision</a>
+                <a href="Our Operations.html"  class="text-dark-gray hover:text-primary transition cursor-pointer">Our Operations</a>
+                <a href="Target Outcomes.html"  class="text-primary font-medium cursor-pointer">Target Outcomes</a>
+                <a href="SecureStore.html"  class="text-dark-gray hover:text-primary transition cursor-pointer">SecureStore</a>
+                <a href="blog.html"  class="text-dark-gray hover:text-primary transition cursor-pointer">Blog</a>
+
+            </nav>
+            <button class="md:hidden text-dark-gray">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Title Section -->
+    <section id="page-title" class="relative text-white py-12 overflow-hidden">
+        <img class="absolute inset-0 w-full h-full object-cover opacity-60" src="sdg1.jpg" alt="Sustainable agriculture field background">
+        <div class="container mx-auto px-5 relative z-10">
+            <h1 class="text-3xl md:text-4xl font-bold mb-4">Sustainable Development Goals</h1>
+            <p class="text-lg max-w-3xl">Our expected outcomes and contributions towards creating a more sustainable and equitable agricultural ecosystem in Nigeria.</p>
+        </div>
+    </section>
+
+    <!-- SDG Overview Section -->
+    <section id="sdg-overview" class="py-16 bg-white">
+        <div class="container mx-auto px-5">
+            <div class="flex flex-col md:flex-row gap-10 items-center">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-primary mb-6">Our Commitment to Sustainability</h2>
+                    <p class="text-base mb-4">At DealCraft Partners, we believe that business success and positive social impact go hand in hand. Our operations are strategically aligned with several United Nations Sustainable Development Goals (SDGs), demonstrating our commitment to creating lasting change in Nigeria's agricultural sector.</p>
+                    <p class="text-base mb-4">Through our innovative solutions like the SecureStore electronic warehouse receipt system, we're working to address key challenges facing smallholder farmers and agricultural communities across Nigeria.</p>
+                    <p class="text-base">Our impact-focused approach ensures that while we build a successful business, we also contribute meaningfully to poverty reduction, food security, economic growth, and responsible production practices.</p>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="rounded-lg overflow-hidden shadow-md">
+                        <img class="w-full h-[350px] object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/35e558c5c8-0e81b4f177ab80bd7f2b.png" alt="Nigerian farmers with modern agricultural technology, sustainable farming practices, professional photography with SDG logos overlaid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SDG Details Section -->
+    <section id="sdg-details" class="py-16 bg-light-gray">
+        <div class="container mx-auto px-5">
+            <h2 class="text-3xl font-bold text-primary mb-10 text-center">Our SDG Contributions</h2>
+            <div class="grid grid-cols-1 gap-10">
+                <!-- SDG 1: No Poverty -->
+                <div id="sdg-1-details" class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/3 bg-primary bg-opacity-10 p-8 flex flex-col justify-center items-center">
+                            <div class="w-32 h-32 mb-6">
+                                <img class="w-full h-full object-contain" src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-01.jpg" alt="SDG 1 No Poverty icon">
+                            </div>
+                            <h3 class="text-2xl font-bold text-primary text-center">SDG 1: No Poverty</h3>
+                            <p class="text-center mt-2">End poverty in all its forms everywhere</p>
+                        </div>
+                        <div class="md:w-2/3 p-8">
+                            <h4 class="text-xl font-bold text-primary mb-4">Our Contributions</h4>
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <div class="bg-primary p-1 rounded-full text-white mr-3 mt-1">
+                                        <i class="fa-solid fa-check text-xs"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium">Increased Farmer Incomes</p>
+                                        <p class="text-gray-600">Our warehouse receipt system allows farmers to store their produce and sell when prices are favorable, increasing their income by up to 30%.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-primary p-1 rounded-full text-white mr-3 mt-1">
+                                        <i class="fa-solid fa-check text-xs"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium">Access to Finance</p>
+                                        <p class="text-gray-600">By enabling farmers to use their stored commodities as collateral, we've helped over 2,000 farmers access loans totaling more than ₦200 million.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-primary p-1 rounded-full text-white mr-3 mt-1">
+                                        <i class="fa-solid fa-check text-xs"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium">Rural Community Development</p>
+                                        <p class="text-gray-600">Our operations have created over 500 direct and indirect jobs in rural communities, providing stable income sources for families.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="mt-6 bg-light-gray p-4 rounded">
+                                <p class="font-medium text-primary">2025 Target:</p>
+                                <p>Increase average farmer income by 45% and expand financial access to 10,000 farmers across Nigeria.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SDG 2: Zero Hunger -->
+                <div id="sdg-2-details" class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/3 bg-primary bg-opacity-10 p-8 flex flex-col justify-center items-center">
+                            <div class="w-32 h-32 mb-6">
+                                <img class="w-full h-full object-contain" src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-02.jpg" alt="SDG 2 Zero Hunger icon">
+                            </div>
+                            <h3 class="text-2xl font-bold text-primary text-center">SDG 2: Zero Hunger</h3>
+                            <p class="text-center mt-2">End hunger, achieve food security and improved nutrition</p>
+                        </div>
+                        <div class="md:w-2/3 p-8">
+                            <h4 class="text-xl font-bold text-primary mb-4">Our Contributions</h4>
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <div class="bg-primary p-1 rounded-full text-white mr-3 mt-1">
+                                        <i class="fa-solid fa-check text-xs"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium">Reducing Post-Harvest Losses</p>
+                                        <p class="text-gray-600">Our storage facilities have helped reduce post-harvest losses from 40% to less than 10%, ensuring more food reaches consumers.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-primary p-1 rounded-full text-white mr-3 mt-1">
+                                        <i class="fa-solid fa-check text-xs"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium">Improving Supply Chain Efficiency</p>
+                                        <p class="text-gray-600">By connecting farmers directly with buyers, we've shortened the supply chain, reducing costs and ensuring fresher produce reaches markets.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-primary p-1 rounded-full text-white mr-3 mt-1">
+                                        <i class="fa-solid fa-check text-xs"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium">Supporting Smallholder Farmers</p>
+                                        <p class="text-gray-600">We've provided training on improved farming techniques to over 3,000 farmers, helping increase yields by an average of 25%.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="mt-6 bg-light-gray p-4 rounded">
+                                <p class="font-medium text-primary">2025 Target:</p>
+                                <p>Reduce post-harvest losses to less than 5% and increase the volume of food stored in our facilities by 200%.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SDG 8: Economic Growth -->
+                <div id="sdg-8-details" class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/3 bg-primary bg-opacity-10 p-8 flex flex-col justify-center items-center">
+                            <div class="w-32 h-32 mb-6">
+                                <img class="w-full h-full object-contain" src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-08.jpg" alt="SDG 8 Economic Growth icon">
+                            </div>
+                            <h3 class="text-2xl font-bold text-primary text-center">SDG 8: Economic Growth</h3>
+                            <p class="text-center mt-2">Promote sustained, inclusive economic growth</p>
+                        </div>
+                        <div class="md:w-2/3 p-8">
+                            <h4 class="text-xl font-bold text-primary mb-4">Our Contributions</h4>
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <div class="bg-primary p-1 rounded-full text-white mr-3 mt-1">
+                                        <i class="fa-solid fa-check text-xs"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium">Job Creation</p>
+                                        <p class="text-gray-600">Our operations have created over 200 direct jobs and supported approximately 300 indirect jobs in the agricultural value chain.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-primary p-1 rounded-full text-white mr-3 mt-1">
+                                        <i class="fa-solid fa-check text-xs"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium">Financial Inclusion</p>
+                                        <p class="text-gray-600">By partnering with financial institutions, we've helped bring banking services to over 5,000 previously unbanked farmers.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-primary p-1 rounded-full text-white mr-3 mt-1">
+                                        <i class="fa-solid fa-check text-xs"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium">Digital Innovation</p>
+                                        <p class="text-gray-600">Our electronic warehouse receipt system has introduced digital technology to agricultural communities, bridging the digital divide.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="mt-6 bg-light-gray p-4 rounded">
+                                <p class="font-medium text-primary">2025 Target:</p>
+                                <p>Create 1,000 additional jobs and expand our digital platform to reach 25,000 farmers across Nigeria.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SDG 12: Responsible Consumption -->
+                <div id="sdg-12-details" class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/3 bg-primary bg-opacity-10 p-8 flex flex-col justify-center items-center">
+                            <div class="w-32 h-32 mb-6">
+                                <img class="w-full h-full object-contain" src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-12.jpg" alt="SDG 12 Responsible Consumption icon">
+                            </div>
+                            <h3 class="text-2xl font-bold text-primary text-center">SDG 12: Responsible Consumption</h3>
+                            <p class="text-center mt-2">Ensure sustainable consumption and production patterns</p>
+                        </div>
+                        <div class="md:w-2/3 p-8">
+                            <h4 class="text-xl font-bold text-primary mb-4">Our Contributions</h4>
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <div class="bg-primary p-1 rounded-full text-white mr-3 mt-1">
+                                        <i class="fa-solid fa-check text-xs"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium">Reducing Food Waste</p>
+                                        <p class="text-gray-600">Our storage solutions and efficient supply chain have reduced food waste by approximately 30% in the communities we serve.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-primary p-1 rounded-full text-white mr-3 mt-1">
+                                        <i class="fa-solid fa-check text-xs"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium">Promoting Sustainable Practices</p>
+                                        <p class="text-gray-600">We provide training on sustainable farming methods to all farmers in our network, reducing chemical use and improving soil health.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <div class="bg-primary p-1 rounded-full text-white mr-3 mt-1">
+                                        <i class="fa-solid fa-check text-xs"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium">Resource Efficiency</p>
+                                        <p class="text-gray-600">Our warehouses utilize solar power and rainwater harvesting, reducing environmental impact while maintaining operational efficiency.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="mt-6 bg-light-gray p-4 rounded">
+                                <p class="font-medium text-primary">2025 Target:</p>
+                                <p>Achieve carbon neutrality in our operations and train 15,000 farmers in sustainable agricultural practices.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Metrics Section -->
+    <section id="impact-metrics" class="py-16 bg-white">
+        <div class="container mx-auto px-5">
+            <h2 class="text-3xl font-bold text-primary mb-10 text-center">Measuring Our Impact</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div id="impact-chart" class="bg-light-gray rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold text-primary mb-6">SDG Progress Metrics (2025)</h3>
+                    <div id="sdg-chart" class="h-[400px]"></div>
+                </div>
+                <div id="impact-stats" class="bg-light-gray rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold text-primary mb-6">Key Impact Statistics</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center">
+                            <div class="w-16 h-16 bg-primary bg-opacity-20 rounded-full flex items-center justify-center mr-4">
+                                <i class="fa-solid fa-users text-primary text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-3xl font-bold text-primary">5,000+</p>
+                                <p class="text-gray-600">Farmers supported across Nigeria</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-16 h-16 bg-primary bg-opacity-20 rounded-full flex items-center justify-center mr-4">
+                                <i class="fa-solid fa-warehouse text-primary text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-3xl font-bold text-primary">12</p>
+                                <p class="text-gray-600">Storage facilities across 6 states</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-16 h-16 bg-primary bg-opacity-20 rounded-full flex items-center justify-center mr-4">
+                                <i class="fa-solid fa-money-bill-trend-up text-primary text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-3xl font-bold text-primary">₦500M+</p>
+                                <p class="text-gray-600">Value of commodities traded annually</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-16 h-16 bg-primary bg-opacity-20 rounded-full flex items-center justify-center mr-4">
+                                <i class="fa-solid fa-seedling text-primary text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-3xl font-bold text-primary">30%</p>
+                                <p class="text-gray-600">Average reduction in post-harvest losses</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SDG Roadmap Section (updated to start from 2025) -->
+    <section id="sdg-roadmap" class="py-16 bg-light-gray">
+        <div class="container mx-auto px-5">
+            <h2 class="text-3xl font-bold text-primary mb-10 text-center">Our SDG Roadmap</h2>
+            <div class="bg-white rounded-lg shadow-md p-8">
+                <div class="relative">
+                    <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary bg-opacity-20"></div>
+                    <!-- 2025 -->
+                    <div class="relative mb-16">
+                        <div class="md:flex items-center">
+                            <div class="md:w-1/2 pr-8 md:text-right mb-6 md:mb-0">
+                                <h3 class="text-2xl font-bold text-primary mb-2">2025</h3>
+                                <p class="text-gray-600 mb-4">Transform & Sustain</p>
+                                <ul class="space-y-2 text-sm">
+                                    <li class="flex md:flex-row-reverse items-start">
+                                        <div class="bg-primary p-1 rounded-full text-white ml-0 md:ml-3 mr-3 md:mr-0 mt-1">
+                                            <i class="fa-solid fa-check text-xs"></i>
+                                        </div>
+                                        <p>Reach 15,000 farmers across Nigeria</p>
+                                    </li>
+                                    <li class="flex md:flex-row-reverse items-start">
+                                        <div class="bg-primary p-1 rounded-full text-white ml-0 md:ml-3 mr-3 md:mr-0 mt-1">
+                                            <i class="fa-solid fa-check text-xs"></i>
+                                        </div>
+                                        <p>Achieve carbon neutrality in operations</p>
+                                    </li>
+                                    <li class="flex md:flex-row-reverse items-start">
+                                        <div class="bg-primary p-1 rounded-full text-white ml-0 md:ml-3 mr-3 md:mr-0 mt-1">
+                                            <i class="fa-solid fa-check text-xs"></i>
+                                        </div>
+                                        <p>Launch farmer innovation fund</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-primary"></div>
+                            <div class="md:w-1/2 pl-0 md:pl-8">
+                                <div class="bg-light-gray p-4 rounded-lg">
+                                    <p class="font-medium">Current Status:</p>
+                                    <p class="text-primary font-bold">In Progress</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2026 -->
+                    <div class="relative mb-16">
+                        <div class="md:flex items-center">
+                            <div class="md:w-1/2 pr-8 md:text-right mb-6 md:mb-0">
+                                <h3 class="text-2xl font-bold text-primary mb-2">2026</h3>
+                                <p class="text-gray-600 mb-4">Scale & Deepen Impact</p>
+                                <ul class="space-y-2 text-sm">
+                                    <li class="flex md:flex-row-reverse items-start">
+                                        <div class="bg-primary p-1 rounded-full text-white ml-0 md:ml-3 mr-3 md:mr-0 mt-1">
+                                            <i class="fa-solid fa-check text-xs"></i>
+                                        </div>
+                                        <p>Expand to 20,000 farmers and 20 states</p>
+                                    </li>
+                                    <li class="flex md:flex-row-reverse items-start">
+                                        <div class="bg-primary p-1 rounded-full text-white ml-0 md:ml-3 mr-3 md:mr-0 mt-1">
+                                            <i class="fa-solid fa-check text-xs"></i>
+                                        </div>
+                                        <p>Double warehouse capacity</p>
+                                    </li>
+                                    <li class="flex md:flex-row-reverse items-start">
+                                        <div class="bg-primary p-1 rounded-full text-white ml-0 md:ml-3 mr-3 md:mr-0 mt-1">
+                                            <i class="fa-solid fa-check text-xs"></i>
+                                        </div>
+                                        <p>Expand digital literacy programs</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-primary bg-opacity-50"></div>
+                            <div class="md:w-1/2 pl-0 md:pl-8">
+                                <div class="bg-light-gray p-4 rounded-lg">
+                                    <p class="font-medium">Current Status:</p>
+                                    <p class="text-primary font-bold">Planned</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 2027 -->
+                    <div class="relative">
+                        <div class="md:flex items-center">
+                            <div class="md:w-1/2 pr-8 md:text-right mb-6 md:mb-0">
+                                <h3 class="text-2xl font-bold text-primary mb-2">2027</h3>
+                                <p class="text-gray-600 mb-4">Regional SDG Leadership</p>
+                                <ul class="space-y-2 text-sm">
+                                    <li class="flex md:flex-row-reverse items-start">
+                                        <div class="bg-primary p-1 rounded-full text-white ml-0 md:ml-3 mr-3 md:mr-0 mt-1">
+                                            <i class="fa-solid fa-check text-xs"></i>
+                                        </div>
+                                        <p>Expand to West African region</p>
+                                    </li>
+                                    <li class="flex md:flex-row-reverse items-start">
+                                        <div class="bg-primary p-1 rounded-full text-white ml-0 md:ml-3 mr-3 md:mr-0 mt-1">
+                                            <i class="fa-solid fa-check text-xs"></i>
+                                        </div>
+                                        <p>Lead SDG-driven agricultural transformation</p>
+                                    </li>
+                                    <li class="flex md:flex-row-reverse items-start">
+                                        <div class="bg-primary p-1 rounded-full text-white ml-0 md:ml-3 mr-3 md:mr-0 mt-1">
+                                            <i class="fa-solid fa-check text-xs"></i>
+                                        </div>
+                                        <p>Publish annual SDG impact reports</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-primary bg-opacity-30"></div>
+                            <div class="md:w-1/2 pl-0 md:pl-8">
+                                <div class="bg-light-gray p-4 rounded-lg">
+                                    <p class="font-medium">Current Status:</p>
+                                    <p class="text-primary font-bold">Planned</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnerships Section (images removed, boxes left empty) -->
+    <section id="partnerships" class="py-16 bg-white">
+        <div class="container mx-auto px-5">
+            <h2 class="text-3xl font-bold text-primary mb-10 text-center">Our SDG Partners</h2>
+            <p class="text-center max-w-3xl mx-auto mb-12">We collaborate with various organizations to maximize our impact and contribute meaningfully to the Sustainable Development Goals.</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-light-gray p-6 rounded-lg shadow-sm flex items-center justify-center h-[120px]"></div>
+                <div class="bg-light-gray p-6 rounded-lg shadow-sm flex items-center justify-center h-[120px]"></div>
+                <div class="bg-light-gray p-6 rounded-lg shadow-sm flex items-center justify-center h-[120px]"></div>
+                <div class="bg-light-gray p-6 rounded-lg shadow-sm flex items-center justify-center h-[120px]"></div>
+            </div>
+            <div class="mt-12 bg-primary bg-opacity-10 p-8 rounded-lg">
+                <h3 class="text-2xl font-bold text-primary mb-6 text-center">Join Our Mission</h3>
+                <p class="text-center max-w-3xl mx-auto mb-8">We're always looking for partners who share our vision of transforming Nigeria's agricultural sector and contributing to the achievement of the SDGs.</p>
+                <div class="text-center">
+                    <span class="inline-block bg-primary hover:bg-opacity-90 text-white font-medium py-3 px-6 rounded-md transition cursor-pointer">Become a Partner</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="cta" class="relative py-20 overflow-hidden">
+        <img class="absolute w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/49abb869a1-31a2d591ee99461ad400.png" alt="Nigerian farmers in a field with modern agricultural technology, sunset lighting, professional photography">
+        <div class="absolute inset-0 bg-primary bg-opacity-80"></div>
+        <div class="container mx-auto px-5 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Join Us in Creating Sustainable Change</h2>
+                <p class="text-white text-lg mb-8">Together, we can transform Nigeria's agricultural sector and contribute to a more sustainable and equitable future.</p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center">
+                    <span class="bg-white text-primary font-medium py-3 px-6 rounded-md transition hover:bg-opacity-90 cursor-pointer">Contact Us</span>
+                    <span class="border-2 border-white text-white font-medium py-3 px-6 rounded-md transition hover:bg-white hover:bg-opacity-20 cursor-pointer">Download Impact Report</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <!-- Footer -->
+    <footer id="footer" class="bg-dark-gray text-white py-10">
+        <div class="container mx-auto px-5">
+            <div class="flex flex-col md:flex-row justify-between mb-8">
+                <div class="mb-6 md:mb-0">
+                    <div class="text-2xl font-bold text-primary mb-4">DealCraft</div>
+                    <p class="max-w-xs text-gray-300">Revolutionizing commodity trading and agricultural finance in Nigeria through innovative technology solutions.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-1 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="index.html" class="text-gray-300 hover:text-primary transition">Company Overview</a></li>
+                            <li><a href="Our Vission.html" class="text-gray-300 hover:text-primary transition">Our Vision</a></li>
+                            <li><a href="Our Operations.html" class="text-gray-300 hover:text-primary transition">Our Operations</a></li>
+                            <li><a href="Target Outcomes.html" class="text-gray-300 hover:text-primary transition">Target Outcomes</a></li>
+                            <li><a href="SecureStore.html" class="text-gray-300 hover:text-primary transition">SecureStore</a>
+                            <li><a href="blog.html" class="text-gray-300 hover:text-primary transition">Blog</a>
+                        </ul>
+                    </div>
+
+                 
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 DealCraft Partners Nigeria Ltd. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-primary transition">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            Highcharts.chart('sdg-chart', {
+                chart: {
+                    type: 'column',
+                    backgroundColor: 'transparent'
+                },
+                title: {
+                    text: null
+                },
+                xAxis: {
+                    categories: ['2025'],
+                    crosshair: true
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: 'Progress (%)'
+                    }
+                },
+                tooltip: {
+                    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                    pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                        '<td style="padding:0"><b>{point.y:.1f}%</b></td></tr>',
+                    footerFormat: '</table>',
+                    shared: true,
+                    useHTML: true
+                },
+                plotOptions: {
+                    column: {
+                        pointPadding: 0.2,
+                        borderWidth: 0
+                    }
+                },
+                series: [{
+                    name: 'SDG 1: No Poverty',
+                    color: '#E5243B',
+                    data: [55]
+                }, {
+                    name: 'SDG 2: Zero Hunger',
+                    color: '#DDA63A',
+                    data: [60]
+                }, {
+                    name: 'SDG 8: Economic Growth',
+                    color: '#8F1838',
+                    data: [65]
+                }, {
+                    name: 'SDG 12: Responsible Consumption',
+                    color: '#C5192D',
+                    data: [50]
+                }]
+            });
+        });
+    </script>
+</body>
+</html>

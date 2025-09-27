@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        ::-webkit-scrollbar { display: none; }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#008000',
+                        accent: '#FFFFFF',
+                        'light-gray': '#f8f8f8',
+                        'dark-gray': '#333333'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif !important;
+        }
+        .fa, .fas, .far, .fal, .fab {
+            font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+        }
+        .highlighted-section {
+            outline: 2px solid #3F20FB;
+            background-color: rgba(63, 32, 251, 0.1);
+        }
+        .edit-button {
+            position: absolute;
+            z-index: 1000;
+        }
+        html, body {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-light-gray font-sans">
+    <!-- Header Section -->
+    <header id="header" class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-5 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="text-2xl font-bold text-primary">DealCraft</div>
+                <span class="text-dark-gray ml-2">Partners Nigeria Ltd</span>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <span class="text-dark-gray hover:text-primary transition cursor-pointer">Company Overview</span>
+                <span class="text-dark-gray hover:text-primary transition cursor-pointer">Our Vision</span>
+                <span class="text-dark-gray hover:text-primary transition cursor-pointer">Our Operations</span>
+                <span class="text-dark-gray hover:text-primary transition cursor-pointer">Target Outcomes</span>
+                <span class="text-dark-gray hover:text-primary transition cursor-pointer font-medium text-primary">Key Team</span>
+                <span class="text-dark-gray hover:text-primary transition cursor-pointer">USP</span>
+                <span class="text-dark-gray hover:text-primary transition cursor-pointer">Contact</span>
+            </nav>
+            <button class="md:hidden text-dark-gray">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Team Hero Section -->
+    <section id="team-hero" class="relative h-[400px] overflow-hidden">
+        <img class="absolute w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/b8e4e70f29-95a7c46705fa17b34f84.png" alt="professional Nigerian business team meeting in modern office with African decor, agricultural charts on wall, diverse team members in formal attire, professional photography">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="container mx-auto px-5 h-full flex flex-col justify-center items-center relative z-10 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Our Leadership Team</h1>
+            <p class="text-xl text-white max-w-2xl">Meet the visionaries driving agricultural innovation in Nigeria</p>
+        </div>
+    </section>
+
+    <!-- Executive Team Section -->
+    <section id="executive-team" class="py-16 bg-white">
+        <div class="container mx-auto px-5">
+            <h2 class="text-3xl font-bold text-primary mb-10 text-center">Executive Leadership</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div id="exec-member-1" class="bg-light-gray rounded-lg overflow-hidden shadow-md">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-2.jpg" alt="CEO" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Oluwaseun Adebayo</h3>
+                        <p class="text-primary font-medium mb-3">Chief Executive Officer</p>
+                        <p class="text-base mb-4">With over 15 years of experience in agricultural finance and commodity trading across West Africa, Oluwaseun founded DealCraft with a vision to transform Nigeria's agricultural sector. His expertise in financial innovation has been instrumental in developing our electronic warehouse receipt system.</p>
+                        <div class="flex space-x-3">
+                            <span class="text-dark-gray hover:text-primary transition cursor-pointer">
+                                <i class="fa-brands fa-linkedin text-lg"></i>
+                            </span>
+                            <span class="text-dark-gray hover:text-primary transition cursor-pointer">
+                                <i class="fa-brands fa-twitter text-lg"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div id="exec-member-2" class="bg-light-gray rounded-lg overflow-hidden shadow-md">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-5.jpg" alt="COO" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Amina Ibrahim</h3>
+                        <p class="text-primary font-medium mb-3">Chief Operations Officer</p>
+                        <p class="text-base mb-4">Amina is a specialist in supply chain management with extensive expertise in agricultural logistics and warehouse operations. She oversees our nationwide network of storage facilities and ensures operational excellence across all our services. Her background includes senior roles at major agribusiness firms.</p>
+                        <div class="flex space-x-3">
+                            <span class="text-dark-gray hover:text-primary transition cursor-pointer">
+                                <i class="fa-brands fa-linkedin text-lg"></i>
+                            </span>
+                            <span class="text-dark-gray hover:text-primary transition cursor-pointer">
+                                <i class="fa-brands fa-twitter text-lg"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div id="exec-member-3" class="bg-light-gray rounded-lg overflow-hidden shadow-md">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-4.jpg" alt="CTO" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-1">Chukwudi Okonkwo</h3>
+                        <p class="text-primary font-medium mb-3">Chief Technology Officer</p>
+                        <p class="text-base mb-4">Chukwudi leads our technology initiatives, bringing a wealth of experience in fintech and agricultural technology solutions. He architected our SecureStore electronic warehouse receipt system and continues to drive innovation in our digital platforms. His background includes leadership roles at prominent Nigerian tech companies.</p>
+                        <div class="flex space-x-3">
+                            <span class="text-dark-gray hover:text-primary transition cursor-pointer">
+                                <i class="fa-brands fa-linkedin text-lg"></i>
+                            </span>
+                            <span class="text-dark-gray hover:text-primary transition cursor-pointer">
+                                <i class="fa-brands fa-twitter text-lg"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Senior Management Section -->
+    <section id="senior-management" class="py-16 bg-light-gray">
+        <div class="container mx-auto px-5">
+            <h2 class="text-3xl font-bold text-primary mb-10 text-center">Senior Management</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div id="mgmt-member-1" class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-6.jpg" alt="CFO" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold mb-1">Folake Adedeji</h3>
+                        <p class="text-primary font-medium mb-3">Chief Financial Officer</p>
+                        <p class="text-sm mb-4">Oversees financial operations and strategy, with expertise in agricultural financing models.</p>
+                        <div class="flex space-x-3">
+                            <span class="text-dark-gray hover:text-primary transition cursor-pointer">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div id="mgmt-member-2" class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-3.jpg" alt="Head of Business Development" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold mb-1">Emmanuel Nwankwo</h3>
+                        <p class="text-primary font-medium mb-3">Head of Business Development</p>
+                        <p class="text-sm mb-4">Leads strategic partnerships and market expansion initiatives across Nigeria.</p>
+                        <div class="flex space-x-3">
+                            <span class="text-dark-gray hover:text-primary transition cursor-pointer">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div id="mgmt-member-3" class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-7.jpg" alt="Head of Warehouse Operations" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold mb-1">Halima Yusuf</h3>
+                        <p class="text-primary font-medium mb-3">Head of Warehouse Operations</p>
+                        <p class="text-sm mb-4">Manages our nationwide network of storage facilities and quality control processes.</p>
+                        <div class="flex space-x-3">
+                            <span class="text-dark-gray hover:text-primary transition cursor-pointer">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div id="mgmt-member-4" class="bg-white rounded-lg overflow-hidden shadow-md">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-8.jpg" alt="Head of Product" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="text-lg font-bold mb-1">Tunde Adeyemi</h3>
+                        <p class="text-primary font-medium mb-3">Head of Product</p>
+                        <p class="text-sm mb-4">Leads product development for our digital platforms and warehouse receipt system.</p>
+                        <div class="flex space-x-3">
+                            <span class="text-dark-gray hover:text-primary transition cursor-pointer">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Regional Leadership Section -->
+    <section id="regional-leadership" class="py-16 bg-white">
+        <div class="container mx-auto px-5">
+            <h2 class="text-3xl font-bold text-primary mb-10 text-center">Regional Leadership</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div id="regional-card-1" class="bg-light-gray rounded-lg overflow-hidden shadow-md">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-4">Northern Region</h3>
+                        <div class="flex items-center mb-6">
+                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-9.jpg" alt="Northern Regional Manager" class="w-16 h-16 rounded-full object-cover mr-4">
+                            <div>
+                                <h4 class="font-bold">Ibrahim Musa</h4>
+                                <p class="text-primary text-sm">Regional Manager</p>
+                            </div>
+                        </div>
+                        <p class="text-base mb-4">Oversees operations in Kano, Kaduna, Jigawa, and Sokoto states, focusing on grains and legumes.</p>
+                        <div class="flex items-center space-x-4">
+                            <div class="flex items-center">
+                                <i class="fa-solid fa-warehouse text-primary mr-2"></i>
+                                <span class="text-sm">5 Warehouses</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fa-solid fa-users text-primary mr-2"></i>
+                                <span class="text-sm">2,300+ Farmers</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="regional-card-2" class="bg-light-gray rounded-lg overflow-hidden shadow-md">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-4">South-Western Region</h3>
+                        <div class="flex items-center mb-6">
+                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-1.jpg" alt="South-Western Regional Manager" class="w-16 h-16 rounded-full object-cover mr-4">
+                            <div>
+                                <h4 class="font-bold">Funmilayo Adebisi</h4>
+                                <p class="text-primary text-sm">Regional Manager</p>
+                            </div>
+                        </div>
+                        <p class="text-base mb-4">Manages operations in Lagos, Ogun, Oyo, and Osun states, specializing in cash crops and tubers.</p>
+                        <div class="flex items-center space-x-4">
+                            <div class="flex items-center">
+                                <i class="fa-solid fa-warehouse text-primary mr-2"></i>
+                                <span class="text-sm">4 Warehouses</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fa-solid fa-users text-primary mr-2"></i>
+                                <span class="text-sm">1,800+ Farmers</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="regional-card-3" class="bg-light-gray rounded-lg overflow-hidden shadow-md">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-4">Eastern Region</h3>
+                        <div class="flex items-center mb-6">
+                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-3.jpg" alt="Eastern Regional Manager" class="w-16 h-16 rounded-full object-cover mr-4">
+                            <div>
+                                <h4 class="font-bold">Chijioke Eze</h4>
+                                <p class="text-primary text-sm">Regional Manager</p>
+                            </div>
+                        </div>
+                        <p class="text-base mb-4">Leads operations in Enugu, Anambra, Imo, and Abia states, with focus on palm produce and cassava.</p>
+                        <div class="flex items-center space-x-4">
+                            <div class="flex items-center">
+                                <i class="fa-solid fa-warehouse text-primary mr-2"></i>
+                                <span class="text-sm">3 Warehouses</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fa-solid fa-users text-primary mr-2"></i>
+                                <span class="text-sm">1,400+ Farmers</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advisory Board Section -->
+    <section id="advisory-board" class="py-16 bg-light-gray">
+        <div class="container mx-auto px-5">
+            <h2 class="text-3xl font-bold text-primary mb-10 text-center">Advisory Board</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div id="advisor-1" class="bg-white rounded-lg shadow-md p-6 flex items-start">
+                    <div class="mr-4">
+                        <div class="w-20 h-20 rounded-full overflow-hidden">
+                            <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/da41609b79-2bcb03e1d373d536ee17.png" alt="professional Nigerian senior male executive in formal attire, glasses, distinguished appearance, headshot">
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-1">Prof. Adewale Johnson</h3>
+                        <p class="text-primary font-medium mb-3">Agricultural Economics Expert</p>
+                        <p class="text-base">Former Director at the Nigerian Institute of Agricultural Research and Economics. Provides strategic guidance on agricultural policy and market trends.</p>
+                    </div>
+                </div>
+                <div id="advisor-2" class="bg-white rounded-lg shadow-md p-6 flex items-start">
+                    <div class="mr-4">
+                        <div class="w-20 h-20 rounded-full overflow-hidden">
+                            <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/f2c940ff6a-7ee45e4018c552ec3fd8.png" alt="professional Nigerian female fintech executive, modern business attire, confident pose, headshot">
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-1">Dr. Ngozi Okafor</h3>
+                        <p class="text-primary font-medium mb-3">Fintech Innovator</p>
+                        <p class="text-base">Founder of a leading Nigerian fintech company. Advises on digital payment systems and financial inclusion strategies for agricultural communities.</p>
+                    </div>
+                </div>
+                <div id="advisor-3" class="bg-white rounded-lg shadow-md p-6 flex items-start">
+                    <div class="mr-4">
+                        <div class="w-20 h-20 rounded-full overflow-hidden">
+                            <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/78b72552b2-a0720372f28714004ab6.png" alt="professional Nigerian male in agricultural attire, experienced farmer appearance, rural setting, headshot">
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-1">Alhaji Musa Yaro</h3>
+                        <p class="text-primary font-medium mb-3">Agricultural Cooperative Leader</p>
+                        <p class="text-base">Chairman of the Northern Farmers Cooperative Alliance. Provides insights on farmer needs and helps strengthen our community relationships.</p>
+                    </div>
+                </div>
+                <div id="advisor-4" class="bg-white rounded-lg shadow-md p-6 flex items-start">
+                    <div class="mr-4">
+                        <div class="w-20 h-20 rounded-full overflow-hidden">
+                            <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/0440b6d828-45e5841a179a620b6716.png" alt="professional Nigerian female in corporate banking attire, elegant appearance, financial executive, headshot">
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-1">Mrs. Folashade Bankole</h3>
+                        <p class="text-primary font-medium mb-3">Banking Sector Expert</p>
+                        <p class="text-base">Former Executive Director at a leading Nigerian commercial bank. Advises on agricultural financing models and banking partnerships.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Values Section -->
+    <section id="team-values" class="py-16 bg-white">
+        <div class="container mx-auto px-5">
+            <h2 class="text-3xl font-bold text-primary mb-10 text-center">Our Team Values</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div id="value-1" class="bg-light-gray rounded-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-handshake text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Integrity</h3>
+                    <p class="text-base">We operate with transparency and honesty in all our dealings with farmers, partners, and stakeholders, building trust throughout the agricultural value chain.</p>
+                </div>
+                <div id="value-2" class="bg-light-gray rounded-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-lightbulb text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Innovation</h3>
+                    <p class="text-base">We continuously seek new solutions to longstanding challenges in the agricultural sector, embracing technology to create more efficient and inclusive systems.</p>
+                </div>
+                <div id="value-3" class="bg-light-gray rounded-lg p-6 text-center">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-users text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Community</h3>
+                    <p class="text-base">We believe in the power of collaboration and building strong relationships with the communities we serve, creating shared value for all stakeholders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Our Team Section -->
+    <section id="join-team" class="py-16 bg-primary bg-opacity-10">
+        <div class="container mx-auto px-5 text-center">
+            <h2 class="text-3xl font-bold text-primary mb-6">Join Our Team</h2>
+            <p class="text-base max-w-2xl mx-auto mb-8">We're always looking for talented individuals who are passionate about transforming agriculture in Nigeria. Explore career opportunities with DealCraft Partners.</p>
+            <button class="bg-primary hover:bg-opacity-90 text-white font-medium py-3 px-8 rounded-md transition">View Open Positions</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-dark-gray text-white py-10">
+        <div class="container mx-auto px-5">
+            <div class="flex flex-col md:flex-row justify-between mb-8">
+                <div class="mb-6 md:mb-0">
+                    <div class="text-2xl font-bold text-primary mb-4">DealCraft</div>
+                    <p class="max-w-xs text-gray-300">Revolutionizing commodity trading and agricultural finance in Nigeria through innovative technology solutions.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><span class="text-gray-300 hover:text-primary transition cursor-pointer">Company Overview</span></li>
+                            <li><span class="text-gray-300 hover:text-primary transition cursor-pointer">Our Vision</span></li>
+                            <li><span class="text-gray-300 hover:text-primary transition cursor-pointer">Our Operations</span></li>
+                            <li><span class="text-gray-300 hover:text-primary transition cursor-pointer">Target Outcomes</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">More Info</h4>
+                        <ul class="space-y-2">
+                            <li><span class="text-gray-300 hover:text-primary transition cursor-pointer">Key Team</span></li>
+                            <li><span class="text-gray-300 hover:text-primary transition cursor-pointer">Our USPs</span></li>
+                            <li><span class="text-gray-300 hover:text-primary transition cursor-pointer">Contact Us</span></li>
+                            <li><span class="text-gray-300 hover:text-primary transition cursor-pointer">Careers</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                        <ul class="space-y-2">
+                            <li><span class="text-gray-300 hover:text-primary transition cursor-pointer">Privacy Policy</span></li>
+                            <li><span class="text-gray-300 hover:text-primary transition cursor-pointer">Terms of Service</span></li>
+                            <li><span class="text-gray-300 hover:text-primary transition cursor-pointer">Cookie Policy</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2023 DealCraft Partners Nigeria Ltd. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    <span class="text-gray-400 hover:text-primary transition cursor-pointer">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </span>
+                    <span class="text-gray-400 hover:text-primary transition cursor-pointer">
+                        <i class="fa-brands fa-twitter"></i>
+                    </span>
+                    <span class="text-gray-400 hover:text-primary transition cursor-pointer">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </span>
+                    <span class="text-gray-400 hover:text-primary transition cursor-pointer">
+                        <i class="fa-brands fa-instagram"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

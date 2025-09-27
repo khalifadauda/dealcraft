@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DealCraft Blog - Commodities News</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif !important;
+        }
+        .fa, .fas, .far, .fal, .fab {
+            font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        html, body {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#008000',
+                        accent: '#FFFFFF',
+                        'light-gray': '#f8f8f8',
+                        'dark-gray': '#333333'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+<body class="bg-light-gray font-sans">
+    <!-- Header Section -->
+    <header id="header" class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-5 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="text-2xl font-bold text-primary">DealCraft</div>
+                <span class="text-dark-gray ml-2">Partners Nigeria Ltd</span>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-dark-gray hover:text-primary transition">Company Overview</a>
+                <a href="Our Vission.html" class="text-dark-gray hover:text-primary transition">Our Vision</a>
+                <a href="Our Operations.html" class="text-dark-gray hover:text-primary transition">Our Operations</a>
+                <a href="Target Outcomes.html" class="text-dark-gray hover:text-primary transition">Target Outcomes</a>
+                <a href="SecureStore.html" class="text-dark-gray hover:text-primary transition">SecureStore</a>
+                <a href="blog.html" class="text-primary font-semibold transition">Blog</a>
+            </nav>
+            <button class="md:hidden text-dark-gray">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Blog Hero Section -->
+    <section class="relative h-[300px] overflow-hidden flex items-center justify-center bg-primary">
+        <img class="absolute w-full h-full object-cover" src="blog.jpg">
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div class="relative z-10 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Commodities News & Insights</h1>
+            <p class="text-lg text-white">Latest updates from the commodities market</p>
+        </div>
+    </section>
+
+    <!-- Blog Feed Section -->
+    <section class="py-16 bg-light-gray min-h-[60vh]">
+        <div class="container mx-auto px-5">
+            <h2 class="text-3xl font-bold text-primary mb-10 text-center">Latest Market News</h2>
+            <div id="news-feed" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- News articles will be injected here -->
+                <div class="col-span-3 text-center text-gray-500" id="loading-news">
+                    Loading news...
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-dark-gray text-white py-10">
+        <div class="container mx-auto px-5">
+            <div class="flex flex-col md:flex-row justify-between mb-8">
+                <div class="mb-6 md:mb-0">
+                    <div class="text-2xl font-bold text-primary mb-4">DealCraft</div>
+                    <p class="max-w-xs text-gray-300">Revolutionizing commodity trading and agricultural finance in Nigeria through innovative technology solutions.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-1 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="index.html" class="text-gray-300 hover:text-primary transition">Company Overview</a></li>
+                            <li><a href="Our Vission.html" class="text-gray-300 hover:text-primary transition">Our Vision</a></li>
+                            <li><a href="Our Operations.html" class="text-gray-300 hover:text-primary transition">Our Operations</a></li>
+                            <li><a href="Target Outcomes.html" class="text-gray-300 hover:text-primary transition">Target Outcomes</a></li>
+                            <li><a href="SecureStore.html" class="text-gray-300 hover:text-primary transition">SecureStore</a></li>
+                             <li><a href="blog.html" class="text-gray-300 hover:text-primary transition">Blog</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 DealCraft Partners Nigeria Ltd. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-primary transition">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    // Fetch and display news from Finnhub API with 24-hour caching
+    document.addEventListener('DOMContentLoaded', function () {
+        const apiKey = 'd39d8qhr01ql85dh9910d39d8qhr01ql85dh991g';
+        const backendUrl = `https://finnhub.io/api/v1/news?category=general&token=${apiKey}`;
+        const newsFeed = document.getElementById('news-feed');
+        const loadingNews = document.getElementById('loading-news');
+        const cacheKey = 'newsCache';
+        const cacheTimestampKey = 'newsCacheTimestamp';
+        const cacheDuration = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+
+        // Function to display news articles
+        function displayNews(data) {
+            if (Array.isArray(data) && data.length > 0) {
+                loadingNews && loadingNews.remove();
+                data.slice(0, 9).forEach(item => {
+                    const card = document.createElement('div');
+                    card.className = "bg-white rounded-lg shadow-md p-6 flex flex-col";
+                    card.innerHTML = `
+                        <a href="${item.url}" target="_blank" rel="noopener" class="block mb-4">
+                            <img src="${item.image || 'https://nairametrics.com/wp-content/uploads/2022/09/nairametrics-logo.png'}" alt="${item.headline}" class="w-full h-48 object-cover rounded-md mb-2">
+                            <h3 class="text-xl font-bold text-primary mb-2">${item.headline}</h3>
+                        </a>
+                        <p class="text-gray-700 text-sm mb-4">${item.summary.replace(/<[^>]+>/g, '').slice(0, 150)}...</p>
+                        <div class="flex justify-between items-center mt-auto">
+                            <span class="text-xs text-gray-500">${new Date(item.datetime * 1000).toLocaleDateString()}</span>
+                            <a href="${item.url}" target="_blank" rel="noopener" class="text-primary hover:underline text-sm font-semibold">Read More <i class="fa fa-arrow-right"></i></a>
+                        </div>
+                    `;
+                    newsFeed.appendChild(card);
+                });
+            } else {
+                loadingNews.textContent = "No news found at this time.";
+            }
+        }
+
+        // Check if cached data exists and is still valid
+        const cachedNews = localStorage.getItem(cacheKey);
+        const cachedTimestamp = localStorage.getItem(cacheTimestampKey);
+        const now = Date.now();
+
+        if (cachedNews && cachedTimestamp && (now - parseInt(cachedTimestamp)) < cacheDuration) {
+            // Use cached data if less than 24 hours old
+            displayNews(JSON.parse(cachedNews));
+        } else {
+            // Fetch new data from Finnhub API
+            fetch(backendUrl)
+                .then(response => response.json())
+                .then(data => {
+                    // Store new data and timestamp in localStorage
+                    localStorage.setItem(cacheKey, JSON.stringify(data));
+                    localStorage.setItem(cacheTimestampKey, now.toString());
+                    displayNews(data);
+                })
+                .catch(() => {
+                    loadingNews.textContent = "Unable to load news feed. Please try again later.";
+                });
+        }
+    });
+    </script>
+</body>
+</html>

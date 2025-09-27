@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        ::-webkit-scrollbar { display: none; }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#008000',
+                        accent: '#FFFFFF',
+                        'light-gray': '#f8f8f8',
+                        'dark-gray': '#333333'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif !important;
+        }
+        .fa, .fas, .far, .fal, .fab {
+            font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+        }
+        .highlighted-section {
+            outline: 2px solid #3F20FB;
+            background-color: rgba(63, 32, 251, 0.1);
+        }
+        .edit-button {
+            position: absolute;
+            z-index: 1000;
+        }
+        html, body {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-light-gray font-sans">
+    <!-- Header Section -->
+    <header id="header" class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-5 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="text-2xl font-bold text-primary">DealCraft</div>
+                <span class="text-dark-gray ml-2">Partners Nigeria Ltd</span>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-dark-gray hover:text-primary transition cursor-pointer">Company Overview</a>
+                <a href="Our Vission.html" class="text-primary font-medium cursor-pointer">Our Vision</a>
+                <a href="Our Operations.html" class="text-dark-gray hover:text-primary transition cursor-pointer">Our Operations</a>
+                <a href="Target Outcomes.html" class="text-dark-gray hover:text-primary transition cursor-pointer">Target Outcomes</a>
+                <a href="SecureStore.html" class="text-dark-gray hover:text-primary transition cursor-pointer">SecureStore</a>
+                <a href="blog.html" class="text-dark-gray hover:text-primary transition cursor-pointer">Blog</a>
+            </nav>
+            <button class="md:hidden text-dark-gray">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Vision Hero Section -->
+    <section id="vision-hero" class="relative h-[400px] overflow-hidden">
+        <img class="absolute w-full h-full object-cover" src="vission1.jpg" alt="Nigerian farmers with modern agricultural technology, rural setting with traditional and modern elements, professional photography">
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div class="container mx-auto px-5 h-full flex flex-col justify-center items-center relative z-10 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Our Vision</h1>
+            <p class="text-xl text-white max-w-2xl">Transforming Nigeria's Commodity sector through innovation and financial inclusion</p>
+        </div>
+    </section>
+
+    <!-- Vision Overview Section -->
+    <section id="vision-overview" class="py-16 bg-white">
+        <div class="container mx-auto px-5">
+            <div class="flex flex-col md:flex-row gap-10 items-center">
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-primary mb-6">Our Vision Statement</h2>
+                    <p class="text-base mb-4">At DealCraft Partners, we envision a transformed agricultural commodity sector where smallholder farmers have reliable access to markets, fair prices for their produce, and the financial tools needed to grow their businesses.</p>
+                    <p class="text-base mb-4">We are committed to creating a more efficient, transparent, and inclusive Commodity value chain that contributes to food security, poverty reduction, and economic growth in Nigeria.</p>
+                    <p class="text-base">Our vision extends beyond commercial success to creating lasting positive impact on communities, improving livelihoods, and contributing to Nigeria's economic development through sustainable agricultural practices.</p>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="rounded-lg overflow-hidden shadow-md">
+                        <img class="w-full h-[350px] object-cover" src="vission.jpg" alt="Nigerian agricultural landscape with farmers using modern technology, green fields with crops, rural setting with traditional and modern elements combined">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section id="core-values" class="py-16 bg-light-gray">
+        <div class="container mx-auto px-5">
+            <h2 class="text-3xl font-bold text-primary mb-10 text-center">Our Core Values</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div id="value-card-1" class="bg-white rounded-lg shadow-md p-8 text-center">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-handshake text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Integrity</h3>
+                    <p class="text-base">We operate with transparency and honesty in all our dealings with farmers, traders, financial institutions, and other stakeholders.</p>
+                </div>
+                <div id="value-card-2" class="bg-white rounded-lg shadow-md p-8 text-center">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-lightbulb text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Innovation</h3>
+                    <p class="text-base">We continuously seek new and better ways to solve challenges in the agricultural value chain through technology and creative thinking.</p>
+                </div>
+                <div id="value-card-3" class="bg-white rounded-lg shadow-md p-8 text-center">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-users text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Inclusivity</h3>
+                    <p class="text-base">We are committed to creating solutions that work for all stakeholders, especially smallholder farmers who have traditionally been underserved.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strategic Pillars Section -->
+    <section id="strategic-pillars" class="py-16 bg-white">
+        <div class="container mx-auto px-5">
+            <h2 class="text-3xl font-bold text-primary mb-10 text-center">Strategic Pillars</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div id="pillar-left" class="flex flex-col space-y-8">
+                    <div id="pillar-item-1" class="bg-light-gray p-6 rounded-lg shadow-md">
+                        <div class="flex items-start">
+                            <div class="bg-primary p-3 rounded-full text-white mr-4 mt-1">
+                                <i class="fa-solid fa-money-bill-wave"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Financial Inclusion</h3>
+                                <p class="text-base">Enabling access to financial services for underserved agricultural communities through our innovative electronic warehouse receipt system and partnerships with financial institutions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="pillar-item-2" class="bg-light-gray p-6 rounded-lg shadow-md">
+                        <div class="flex items-start">
+                            <div class="bg-primary p-3 rounded-full text-white mr-4 mt-1">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Market Efficiency</h3>
+                                <p class="text-base">Creating transparent and efficient markets for agricultural commodities by connecting farmers directly with buyers and providing real-time market information.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="pillar-item-3" class="bg-light-gray p-6 rounded-lg shadow-md">
+                        <div class="flex items-start">
+                            <div class="bg-primary p-3 rounded-full text-white mr-4 mt-1">
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold mb-2">Sustainable Development</h3>
+                                <p class="text-base">Contributing to Nigeria's achievement of key Sustainable Development Goals through our operations and partnerships with local and international organizations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="pillar-right">
+                    <div class="bg-light-gray p-8 rounded-lg shadow-md h-full">
+                        <h3 class="text-2xl font-bold text-primary mb-6">Long-Term Vision</h3>
+                        <p class="text-base mb-6">By 2030, DealCraft Partners aims to become the leading agricultural commodities platform in West Africa, serving over 100,000 farmers and facilitating transactions worth over ₦10 billion annually.</p>
+                        <div class="mt-6">
+                            <div id="vision-goal-1" class="flex items-center mb-4">
+                                <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center mr-3">
+                                    <i class="fa-solid fa-check text-white text-xs"></i>
+                                </div>
+                                <span class="text-base">Expand operations to 20 states across Nigeria</span>
+                            </div>
+                            <div id="vision-goal-2" class="flex items-center mb-4">
+                                <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center mr-3">
+                                    <i class="fa-solid fa-check text-white text-xs"></i>
+                                </div>
+                                <span class="text-base">Develop a network of 500+ certified warehouses</span>
+                            </div>
+                            <div id="vision-goal-3" class="flex items-center mb-4">
+                                <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center mr-3">
+                                    <i class="fa-solid fa-check text-white text-xs"></i>
+                                </div>
+                                <span class="text-base">Facilitate access to over ₦5 billion in financing for farmers</span>
+                            </div>
+                            <div id="vision-goal-4" class="flex items-center mb-4">
+                                <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center mr-3">
+                                    <i class="fa-solid fa-check text-white text-xs"></i>
+                                </div>
+                                <span class="text-base">Reduce post-harvest losses by 50% for participating farmers</span>
+                            </div>
+                            <div id="vision-goal-5" class="flex items-center">
+                                <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center mr-3">
+                                    <i class="fa-solid fa-check text-white text-xs"></i>
+                                </div>
+                                <span class="text-base">Expand operations to neighboring West African countries</span>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <img class="w-full h-[200px] object-cover rounded-lg" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/054ece0aae-91ef7e451bd9c04cc4fd.png" alt="African farmers using digital technology in fields, showing mobile phones with agricultural apps, professional photography">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Roadmap Section (Updated, all other sections removed as requested) -->
+    <section id="vision-roadmap" class="py-16 bg-light-gray">
+        <div class="container mx-auto px-5">
+            <h2 class="text-3xl font-bold text-primary mb-10 text-center">Our Vision Roadmap</h2>
+            <div class="relative">
+                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary bg-opacity-30 hidden md:block"></div>
+                <div class="relative z-10">
+                    <!-- Start roadmap from 2025-2026 -->
+                    <div id="roadmap-item-2" class="flex flex-col md:flex-row items-center md:items-start mb-12 relative">
+                        <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+                            <div class="bg-white p-6 rounded-lg shadow-md inline-block">
+                                <h3 class="text-xl font-bold mb-2 text-primary">2025-2026</h3>
+                                <h4 class="text-lg font-semibold mb-3">Scaling Operations</h4>
+                                <p class="text-base">Expand warehouse network to 10 states, reach 20,000 farmers, and develop advanced market intelligence tools for agricultural commodities.</p>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-primary rounded-full flex items-center justify-center hidden md:flex">
+                            <span class="text-white font-bold">1</span>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 hidden md:block"></div>
+                    </div>
+                    <div id="roadmap-item-3" class="flex flex-col md:flex-row items-center md:items-start mb-12 relative">
+                        <div class="md:w-1/2 md:pr-12 hidden md:block"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-primary rounded-full flex items-center justify-center hidden md:flex">
+                            <span class="text-white font-bold">2</span>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 mb-6 md:mb-0">
+                            <div class="bg-white p-6 rounded-lg shadow-md inline-block">
+                                <h3 class="text-xl font-bold mb-2 text-primary">2027-2028</h3>
+                                <h4 class="text-lg font-semibold mb-3">Innovation & Integration</h4>
+                                <p class="text-base">Introduce blockchain technology for full traceability, integrate with international markets, and launch innovative financial products for farmers.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="roadmap-item-4" class="flex flex-col md:flex-row items-center md:items-start mb-12 relative">
+                        <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+                            <div class="bg-white p-6 rounded-lg shadow-md inline-block">
+                                <h3 class="text-xl font-bold mb-2 text-primary">2029-2030</h3>
+                                <h4 class="text-lg font-semibold mb-3">Regional Expansion</h4>
+                                <p class="text-base">Expand operations to neighboring West African countries, serve 100,000+ farmers, and establish DealCraft as the leading agricultural platform in the region.</p>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-primary rounded-full flex items-center justify-center hidden md:flex">
+                            <span class="text-white font-bold">3</span>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 hidden md:block"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="cta" class="py-16 bg-primary">
+        <div class="container mx-auto px-5 text-center">
+            <h2 class="text-3xl font-bold text-white mb-6">Join Us in Transforming Nigerian Agriculture</h2>
+            <p class="text-xl text-white max-w-3xl mx-auto mb-8">Whether you're a farmer, trader, investor, or potential partner, we invite you to be part of our vision for a more efficient, inclusive, and sustainable agricultural sector.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <span class="bg-white text-primary font-medium py-3 px-6 rounded-md hover:bg-opacity-90 transition cursor-pointer">Partner With Us</span>
+                <span class="bg-transparent border-2 border-white text-white font-medium py-3 px-6 rounded-md hover:bg-white hover:bg-opacity-10 transition cursor-pointer">Learn More</span>
+            </div>
+        </div>
+    </section>
+
+     <!-- Footer -->
+    <footer id="footer" class="bg-dark-gray text-white py-10">
+        <div class="container mx-auto px-5">
+            <div class="flex flex-col md:flex-row justify-between mb-8">
+                <div class="mb-6 md:mb-0">
+                    <div class="text-2xl font-bold text-primary mb-4">DealCraft</div>
+                    <p class="max-w-xs text-gray-300">Revolutionizing commodity trading and agricultural finance in Nigeria through innovative technology solutions.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-1 gap-8">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="index.html" class="text-gray-300 hover:text-primary transition">Company Overview</a></li>
+                            <li><a href="Our Vission.html" class="text-gray-300 hover:text-primary transition">Our Vision</a></li>
+                            <li><a href="Our Operations.html" class="text-gray-300 hover:text-primary transition">Our Operations</a></li>
+                            <li><a href="Target Outcomes.html" class="text-gray-300 hover:text-primary transition">Target Outcomes</a></li>
+                            <li><a href="SecureStore.html" class="text-gray-300 hover:text-primary transition">SecureStore</a>
+                            <li><a href="blog.html" class="text-gray-300 hover:text-primary transition">Blog</a>
+                        </ul>
+                    </div>
+
+                 
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 DealCraft Partners Nigeria Ltd. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-primary transition">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
